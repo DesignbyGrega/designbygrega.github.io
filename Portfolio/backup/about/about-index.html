@@ -6,50 +6,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <title>Ⓒ About Grega</title>
-    <link rel="stylesheet" href="style-about.css">
+    <link rel="stylesheet" href="about.css">
 </head>
 <body>
 
+    <div class="mobile-menu-main">
+
+        <div class="menu-top">
+            <div class="logo">
+                <a href="#"><h4>&copy;Design by Grega</h4></a>
+            </div>
+            <svg class="exit-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.3333 21.3334L10.6666 10.6667" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21.3333 10.6667L10.6666 21.3334" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                
+        </div>
+
+        <div class="menu-main">
+            <ul class="main-items">
+                <li><a class="no-active-a" href="file:///D:/HTML&CSS%20učenje/Portfolio/backup/index-backup.html">Home</a></li>
+                <li><a class="no-active-a" href="file:///D:/HTML&CSS%20učenje/Portfolio/backup/work/work-index.html">Work</a></li>
+                <li><a class="active-a" href="">About</a></li>
+                <li><a class="no-active-a" href="file:///D:/HTML&CSS%20učenje/Portfolio/backup/assets/contact/contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-line">
+            <div class="line-n"></div>
+        </div>
+
+        <div class="nav-social">
+
+            <div>
+                <h5>Social</h5>
+            </div>
+
+            <ul class="social-items">
+                <li><a href="">Instagram</a></li>
+                <li><a href="">LinkedIn</a></li>
+                <li><a href="">Dribbble</a></li>
+            </ul>
+        </div>
+    </div>
+
     <div id="main">
 
+        <!--NAV-->  
         <div id="nav">
             <div id="left-nav">
-                <a href="https://designbygrega.github.io/Portfolio/backup/index-backup.html">&copy;Design by Grega</a>
+                <a class="" href="file:///D:/HTML&CSS%20učenje/Portfolio/backup/index-backup.html">&copy;Design by Grega</a>
             </div>
 
             <div id="right-nav">
-                <a href="https://designbygrega.github.io/Portfolio/backup/work/work-index.html" class="navlink">Work</a>
-                <a href="https://designbygrega.github.io/Portfolio/backup/about/about-index.html" class="navlink">About</a>
-                <a href="https://designbygrega.github.io/Portfolio/backup/assets/contact/contact.html" class="navlink">Contact</a>
+                <a href="file:///D:/HTML&CSS%20učenje/Portfolio/backup/work/work-index.html" class="navlink">Work</a>
+                <a href="#" class="navlink">About</a>
+                <a href="file:///D:/HTML&CSS%20učenje/Portfolio/backup/assets/contact/contact.html" class="navlink">Contact</a>
+            </div>
+
+            <div class="mobile-menu">
+                <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 17L19 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5 12H19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5 7H19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
             </div>
         </div>
 
-        <section class="hero-wrap is--pj-hero">
-            <div class="c-container is--pj-hero">
-                <div class="pj-hero-wrap">
-                    <div class="text">
-                        <h1 class="fancy">Boosting brands in</h1>
-                        <h1 class="fancy">digital world</h1>
-                    </div>
-                    <div class="line">
-                        <div class="hr-line"></div>
-                    </div>
+        
+        <!--HERO-->
+        <div class="hero-section">
+            <div class="container-hero">
+                <div class="hero-text">
+                    <h1 class="hero-title fancy">Boosting brands in</h1>
+                    <h1 class="hero-title fancy">digital world.</h1>
                 </div>
+                
             </div>
-        </section>
+        </div>
 
-        <section class="c-section is--pj wf-section">
-            <div class="w-layout-grid">
-                <div class="column-wraper-img">
-                    <div class="img-wraper">
-                        <img src="./me.jpg" alt="" class="g-img"><!--Small img-->
+
+        <!--ME-->
+        <div class="me-section">
+            <div class="m-grid">
+                <div class="column-img">
+                    <div class="img-wrapper">
+                        <img src="./me.jpg" class="g-img" alt="">
                     </div>
                 </div>
 
-                <div class="info-column ">
+                <div class="column-info show">
                     <div class="info-wraper sticky">
-                        <div class="info-head show">I'm HOOPER</div>
-                        <p class="info-body show">
+                        <div class="info-head">I'm HOOPER</div>
+                        <p class="info-body">
                             I’m a 22 years old designer who is interested in UX design and in programming languages. I use my passion and skills to create digital products and experiences
                             <br>
                             <br>
@@ -58,8 +107,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
+
+        <!--SERVICES-->
         <div id="recentworks">
             <h1>Services</h1>
         </div>
@@ -94,6 +145,7 @@
         </div>
 
 
+        <!--FOOTER-->
         <div class="footer" id="footer">
             <div class="container">
                 <h1>Let's talk design</h1>
@@ -103,7 +155,7 @@
 
                 <div id="buttons">  
                     <div class="footer-btn">
-                        <a href="mailto:designbygrega@gmail.com" class="navlink-f" >designbygrega@gmail.com</a>
+                        <a href="#" class="navlink-f" >designbygrega@gmail.com</a>
                     </div>
                     <div class="footer-btn">    
                         <a href="#" class="navlink-f">+386 51 410 498</a>
@@ -116,7 +168,7 @@
                         <div><h2>Social</h2></div>
                         <ul class="social-items">
                             <li><a href="#" class="navlink-f">Instagram</a></li>
-                            <li><a href="https://www.linkedin.com/in/grega-kuralt-56784b226/" class="navlink-f">Linkedin</a></li>
+                            <li><a href="#" class="navlink-f">Linkdin</a></li>
                             <li><a href="#" class="navlink-f">Dribbble</a></li>
                         </ul>
                     </div>
@@ -124,9 +176,6 @@
 
             </div>
         </div>
-    </div>
-
-
     </div>
     
 
