@@ -32,6 +32,10 @@ html, body{
     color: black;
 }
 
+ul{
+    list-style-type: none;
+}
+
 body{
     background-color: #efefef;
 }
