@@ -1,9 +1,32 @@
+//Nav slide animation
+const navSlide = () => {
+    const icon = document.querySelector('.mobile-menu');
+    const nav = document.querySelector('.mobile-menu-main');
+
+    icon.addEventListener('click', () => {
+        nav.classList.toggle('mobile-menu-active');
+    });
+}
+
+navSlide(); 
+
+
+const slideClose = () => {
+    const exit = document.querySelector('.exit-icon');
+    const nav = document.querySelector('.mobile-menu-main');
+
+    exit.addEventListener('click', () => {
+        nav.classList.remove('mobile-menu-active');
+    })
+}
+
+slideClose();
+
+
+
+
+
 //Text animatio
-
-
-
-
-
 const items = document.querySelectorAll('.show');
 
 const active = function(entries){
@@ -20,31 +43,7 @@ const io2 = new IntersectionObserver(active);
 
 
 
-gsap.from(".slide1", {
-    scrollTrigger:{
-        trigger: "#slide-show",
-        start: "0% 50%",
-        end: "150% 100%",
-        scrub: 2,
-        // markers: true
-    },
-    x: -200,
-    duration: 1
 
-})
-
-gsap.from(".slide2", {
-    scrollTrigger:{
-        trigger: "#slide-show",
-        start: "0% 10%",
-        end: "100% 100%",
-        scrub: 2,
-        // markers: true
-    },
-    x: 100,
-    duration: 1
-
-})
 
 
 
@@ -53,7 +52,7 @@ gsap.from(".slide2", {
 window.addEventListener("mousemove", function(dets){
     document.querySelector("#slidephoto").style.top=`${dets.clientY}px`
     document.querySelector("#slidephoto").style.left=`${dets.clientX}px`
-    document.querySelector("#slidephoto").style.transform =`translate(${-dets.clientX*0.24}px, ${-dets.clientY*0.7}px)`
+    document.querySelector("#slidephoto").style.transform =`translate(${-dets.clientX*0.25}px, ${-dets.clientY*.5}px)`
     document.querySelector("#slidephoto").style.cursor = "pointer"
 });
 
