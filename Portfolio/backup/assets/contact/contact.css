@@ -1,0 +1,421 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+
+.fancy{
+    display:none;
+}
+
+span{
+    opacity: 0;
+    transform: translateY(200px);
+    transition: all 0.8s ease;
+    display:inline-block;
+}
+
+span.fade{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+span.space {
+    padding-right: 24px;
+  }
+
+html, body{
+    width: 100%;
+    height: 100%;
+    color: black;
+}
+
+ul{
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color: #f8f8f8;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+#hero-container{
+    position: relative;
+    width: 100%;
+    height: 80px;
+}
+
+/*Navigation*/
+#nav{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 80px;
+    height: 80px;
+    z-index: 100;
+    background-color: transparent;
+    mix-blend-mode: difference;
+}
+
+#nav a{
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+
+}
+
+#right-nav{
+    height:35px;
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    overflow: hidden;
+}
+
+.navlink{
+    position: relative;
+}
+
+/*NAVIGATION LINK ANIMATION*/
+.navlink::after{
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -5px;
+    left: 0px;
+    background:white;
+    transform: scaleX(0); /*linija je nevidna ker ima scale 0*/
+    transform-origin: right; /* ko ne hovaras je linija na desni strani / ko greš dol iz linka gre linija stran po desni strani*/
+    transition: transform 0.4s ease-in-out; /*animacija*/
+}
+
+.navlink:hover::after {
+    transform: scaleX(1);/*ko hovaras dobi linija scale 1 in zato postane vidna*/
+    transform-origin: left;/*njen origin smo spremenil na levo da gre linija lahko iz leve proti desni*/
+}
+
+.mobile-menu{
+    position: relative;
+    width:40px;
+    height:40px;
+    background-color:white;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon{
+    mix-blend-mode: difference;
+}
+
+.mobile-menu-main{
+    position: absolute;
+    display:none;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color:#1E1E1E;
+    top: 0px;
+    right: 0px;
+    z-index: 200;
+    padding:0px 16px;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+}
+
+.menu-top{
+    height:80px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content:space-between;
+    padding: 0px 8px 0px 0px;
+}
+
+.menu-top h4{
+    color: #f8f8f8;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.menu-main{
+    padding-top: 80px;
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.active-a{
+    color: #f8f8f8;
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.no-active-a {
+    color: #7e7e7e;
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.menu-main ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nav-line{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.line-n{
+    width: 100%;
+    height: 1px;
+    background-color: #f8f8f8;
+    margin-bottom: 40px;
+}
+
+.nav-social{
+    display: flex;
+    position: relative;
+    flex-direction:column;
+    gap: 8px;
+}
+
+.nav-social ul{
+    display: flex;
+    flex-direction:row;
+    gap: 24px;
+}
+
+.nav-social a{
+    color: #f8f8f8;
+    font-size: 20px;
+    font-weight:300;
+}
+
+.nav-social h5{
+    font-size: 12px;
+    color: #d7d7d7;
+    letter-spacing:2px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.mobile-menu-active{
+    transform: translateX(0%);
+    position: fixed;
+}
+
+
+/* Mobile */
+@media only screen and (max-width: 768px){
+
+    #nav{
+     padding: 0 16px;
+     width:100%;
+     position:fixed;
+    }
+ 
+    .mobile-menu-main{
+        display:flex;
+        position:fixed;
+    }
+ 
+    .mobile-menu{
+     display:flex;
+     z-index: 300;
+    }
+    
+   #right-nav{
+    display:none;
+   }
+ 
+}
+
+
+
+
+
+/*HERO*/
+.hero-wraper{
+    font-family: arial;
+    width: 100%;
+    height: 800px;
+
+    /* Setup */
+    position: relative;
+    
+}
+
+.mail-text{
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    padding: 0px 80px;
+}
+
+.mail-text a{
+    color: #1E1E1E;
+    text-align: center;
+    font-size: 128px;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 768px){
+    .mail-text a{
+        font-size: 48px;
+    }
+
+    .mail-text{
+        top: 40%;
+        padding: 0px 16px;
+    }
+
+    .hero-wraper{
+        width: 100%;
+        height: 700px;
+    }
+}
+
+@media only screen and (max-width: 375px){
+    .hero-wraper{
+        width: 100%;
+        height: 500px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* SOCIAL */
+.social-wraper{
+    position: relative;
+    width: 100%;
+    height:80px;
+    padding: 0px 80px;
+}
+
+.social-container{
+    display: flex;
+    float: right;
+}
+
+.social-items{
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+}
+
+.social-container a{
+    color: #1E1E1E;
+}
+
+.navlink-f{
+    position: relative;
+}
+
+.navlink-f::after{
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -5px;
+    left: 0px;
+    background:#1E1E1E;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-in-out;
+}
+
+.navlink-f:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+@media only screen and (max-width: 768px){
+    .social-wraper{
+        padding: 0px 16px;
+    }
+
+    .social-container{
+        display: flex;
+        justify-content:center;
+        float:none;
+    }
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Text animation*/
+.fancy{
+    display:none;
+}
+
+span{
+    opacity: 0;
+    transform: translateY(200px);
+    transition: all 0.8s ease;
+    display:inline-block;
+}
+
+span.fade{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+span.space {
+    padding-right: 32px;
+}
+
+@media only screen and (max-width: 768px){
+    span.space {
+        padding-right: 14px;
+    }
+}

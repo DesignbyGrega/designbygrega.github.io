@@ -1,3 +1,33 @@
+//mobile animation
+const navSlide = () => {
+    const icon = document.querySelector('.mobile-menu');
+    const nav = document.querySelector('.mobile-menu-main');
+
+    icon.addEventListener('click', () => {
+        nav.classList.toggle('mobile-menu-active');
+    });
+}
+
+navSlide(); 
+
+
+const slideClose = () => {
+    const exit = document.querySelector('.exit-icon');
+    const nav = document.querySelector('.mobile-menu-main');
+
+    exit.addEventListener('click', () => {
+        nav.classList.remove('mobile-menu-active');
+    })
+}
+
+slideClose();
+
+
+
+
+
+
+
 const allTextArray = document.querySelectorAll('.fancy');
 let j=0;
 (animatedText=()=>{
