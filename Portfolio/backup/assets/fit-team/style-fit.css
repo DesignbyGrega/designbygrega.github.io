@@ -596,6 +596,7 @@ img{
 .info-body{
     line-height: 150%;
     font-weight: 300;
+    font-size: 18px;
 }
 
 @media only screen and (max-width: 768px){
