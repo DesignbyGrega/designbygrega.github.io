@@ -109,9 +109,9 @@ gsap.from(".slide2", {
 ///////add Event Listner/////------
 
 window.addEventListener("mousemove", function(dets){
-    document.querySelector("#slidephoto").style.top=`${dets.clientY}px`
-    document.querySelector("#slidephoto").style.left=`${dets.clientX}px`
-    document.querySelector("#slidephoto").style.transform =`translate(${-dets.clientX*0.24}px, ${-dets.clientY*0.7}px)`
+    document.querySelector("#slidephoto").style.top=`${dets.clientY - 240}px`
+    document.querySelector("#slidephoto").style.left=`${dets.clientX - 240}px`
+    //document.querySelector("#slidephoto").style.transform =`translate(${-dets.clientX*0.24}px, ${-dets.clientY*0.7}px)`
     document.querySelector("#slidephoto").style.cursor = "pointer"
 });
 
